@@ -14,9 +14,9 @@ public class Clock : MonoBehaviour
         var hoursSinceMidnight = time.TotalHours; // decimal: e.g. 19.290
 
         // Exercise:
-        var rotationSeconds = minutesSinceMidnight % 60;
-        var rotationMinutes = hoursSinceMidnight % 60;
-        var rotationHours = hoursSinceMidnight % 12 / 12;
+        var rotationSeconds = 0;
+        var rotationMinutes = 0;
+        var rotationHours = 0;
 
         SecondHand.localRotation = Quaternion.Euler(0, (float) rotationSeconds * 360, 0);
         MinuteHand.localRotation = Quaternion.Euler(0, (float) rotationMinutes * 360, 0);

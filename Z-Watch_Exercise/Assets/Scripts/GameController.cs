@@ -16,8 +16,6 @@ public class GameController : MonoBehaviour
     private TimeSpan simulationStartTime;
     private TimeSpan realStartTime;
     private bool gameRunning = false;
-    private float secondsBetweenSpawns = 3;
-    private float spawnAcceleration = 0.04f;
 
     void Start()
     {
@@ -63,8 +61,7 @@ public class GameController : MonoBehaviour
             goblin.GetComponent<GoblinController>().target = clock.gameObject.transform;
             goblin.GetComponent<GoblinController>().gameController = this;
 
-            secondsBetweenSpawns -= spawnAcceleration;
-            yield return new WaitForSeconds(secondsBetweenSpawns);
+            yield return new WaitForSeconds(3);
         }
     }
 
@@ -81,7 +78,6 @@ public class GameController : MonoBehaviour
         var pos = Random.insideUnitCircle.normalized;
         return new Vector3(pos.x, 0, pos.y);
     }
-
 
     public void OnDamage(float damage)
     {

@@ -141,8 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 590fccc4911c464e9757c94a4d687b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goblinPrefab: {fileID: 1583129742407608, guid: 30777643d2e10934bb8405844eb0d96c,
-    type: 2}
+  goblinPrefab: {fileID: 0}
   marker: {fileID: 1197987540}
   clock: {fileID: 0}
   sparkEffect: {fileID: 0}
